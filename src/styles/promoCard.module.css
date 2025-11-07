@@ -8,8 +8,9 @@
   padding: 40px 60px;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
   max-width: 960px;
-  margin: 40px auto;
   background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%);
+  z-index: 999;
+  width: 100%;
 }
 
 .textArea {

@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import styles from "../styles/support.module.css";
+import http from "../http/http";
+import errorMessage from "../http/httpMessage"
 
 const SupportPage = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -8,10 +10,22 @@ const SupportPage = () => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert("Thank you for contacting Stamply Support! We'll get back to you soon.");
-    setForm({ name: "", email: "", message: "" });
+    
+    try{
+      const res = await http.post(`/v1/support`, form);
+      if(res.data.success){
+        alert(res.data.message);
+      }
+    }
+    catch(err){
+      const msg = errorMessage(err);
+      alert(msg);
+    }
+    finally{
+      setForm({ name: "", email: "", message: "" });
+    }
   };
 
   return (

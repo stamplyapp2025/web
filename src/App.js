@@ -10,7 +10,7 @@ function App() {
   return (
     <Router>
       <Header />
-      <main style={{ padding: "24px" }}>
+      <main>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/pricing" element={<PricingPage />} />
