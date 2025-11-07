@@ -10,7 +10,7 @@ const SupportPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert("Thank you for contacting WinStamp Support! We'll get back to you soon.");
+    alert("Thank you for contacting Stamply Support! We'll get back to you soon.");
     setForm({ name: "", email: "", message: "" });
   };
 
@@ -90,7 +90,7 @@ const SupportPage = () => {
         <div className={styles.faqItem}>
           <h3>How can I contact support directly?</h3>
           <p>
-            You can reach us at <strong>support@winstamp.com</strong> or by submitting
+            You can reach us at <strong>stamplyapp2025@gmail.com</strong> or by submitting
             the form above. We typically respond within 24 hours.
           </p>
         </div>

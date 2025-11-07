@@ -50,7 +50,7 @@ export default function PromoCard() {
         <h1 className={styles.title} style={{ color: theme.colors.primary }}>
           DIGITAL<br />LOYALTY
         </h1>
-        <p className={styles.link}>www.stamply.com</p>
+        <p className={styles.link}>www.stamply.nu</p>
       </div>
 
       {/* Right Side (swipeable image) */}

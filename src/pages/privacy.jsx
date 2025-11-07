@@ -10,7 +10,7 @@ const PrivacyPage = () => {
       <section className={styles.section}>
         <h2>1. Introduction</h2>
         <p>
-          At <strong>WinStamp</strong>, we value your privacy and are committed
+          At <strong>Stamply</strong>, we value your privacy and are committed
           to protecting your personal information. This Privacy Policy explains
           how we collect, use, and safeguard your data when you use our website
           and services.
