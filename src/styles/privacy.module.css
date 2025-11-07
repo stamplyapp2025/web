@@ -1,0 +1,48 @@
+.container {
+  background-color: #ffffff;
+  color: #222222;
+  padding: 48px 24px;
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #F7A500;
+  margin-bottom: 8px;
+}
+
+.updated {
+  color: #888888;
+  font-size: 0.9rem;
+  margin-bottom: 32px;
+}
+
+.section {
+  margin-bottom: 32px;
+  text-align: left;
+}
+
+.section h2 {
+  color: #F7A500;
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+}
+
+.section p {
+  color: #444444;
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
+
+.section ul {
+  list-style: disc;
+  margin-left: 20px;
+  color: #444444;
+}
+
+.section ul li {
+  margin-bottom: 6px;
+}

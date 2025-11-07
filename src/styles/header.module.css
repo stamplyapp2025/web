@@ -1,0 +1,96 @@
+.header {
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 32px;
+  border-bottom: 1px solid #eeeeee;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* --- Logo --- */
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+  color: #222222;
+  font-size: 1.25rem;
+}
+
+.logoMark {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #FF9800, #F57C00);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.logoText {
+  font-weight: bold;
+  color: #222222;
+}
+
+/* --- Navigation --- */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.link {
+  color: #222222;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.link:hover {
+  color: #F7A500;
+}
+
+/* --- Buttons --- */
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.downloadButton {
+  border: 2px solid #F7A500;
+  border-radius: 9999px;
+  padding: 8px 18px;
+  color: #F7A500;
+  background: transparent;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.downloadButton:hover {
+  background-color: #fff6d9;
+}
+
+.getStartedButton {
+  background: linear-gradient(135deg, #FF9800, #F57C00);
+  border-radius: 9999px;
+  padding: 8px 20px;
+  color: #fff;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.getStartedButton:hover {
+  opacity: 0.85;
+}
