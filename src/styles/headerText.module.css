@@ -1,9 +1,26 @@
 .promoContainer {
+  position: relative; /* for pseudo-element positioning */
   text-align: center;
   padding: 30px 20px;
   background: transparent;
   color: #000;
 }
+
+/* ✅ full-width bottom border */
+.promoContainer::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 100vw; /* full screen width */
+  height: 1px; /* ⬆️ made thicker */
+  background: #9b9b9b; /* soft gray tone */
+  transform: translateX(-50%); /* keeps it perfectly centered */
+  border-radius: 1px; /* optional: slightly rounded edges */
+}
+
+
+/* --- Existing styles --- */
 
 .promoTitle {
   font-size: 2rem;
@@ -50,6 +67,7 @@
   border-radius: 25px;
   cursor: pointer;
   transition: all 0.2s ease;
+  text-decoration: none;
 }
 
 .btnFilled:hover {

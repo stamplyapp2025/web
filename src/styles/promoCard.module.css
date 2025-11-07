@@ -3,15 +3,34 @@
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  border: 1px solid;
-  border-radius: 20px;
-  padding: 40px 60px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
-  max-width: 960px;
-  background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%);
-  z-index: 999;
+
   width: 100%;
+  max-width: 960px;
+  padding: 40px 60px;
+  border-radius: 20px;
+
+  /* ✅ Top border darker, others subtle */
+  border-top: 3px solid rgba(0, 0, 0, 0.6);
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+
+  background: linear-gradient(145deg, #ffffff, #f3f3f3);
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.1),
+    0 4px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  z-index: 999;
 }
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.15),
+    0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
 
 .textArea {
   flex: 1;

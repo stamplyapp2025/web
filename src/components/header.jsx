@@ -19,8 +19,7 @@ const Header = () => {
       </nav>
 
       <div className={styles.buttonContainer}>
-        <button className={styles.downloadButton}>Download</button>
-        <Link to="/signup" className={styles.link}>Get Started</Link>
+        <Link to="/signup" className={styles.downloadButton}>Get Started</Link>
       </div>
     </header>
   );

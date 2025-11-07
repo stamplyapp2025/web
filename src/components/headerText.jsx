@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "../styles/headerText.module.css";
+import { Link } from "react-router-dom";
 
 export default function HeaderText() {
   return (
@@ -13,7 +14,7 @@ export default function HeaderText() {
       </p>
       <div className={styles.promoButtons}>
         <button className={styles.btnOutline}>Download</button>
-        <button className={styles.btnFilled}>Get Started</button>
+        <Link to="/signup" className={styles.btnFilled}>Get Started</Link>
       </div>
     </div>
   );

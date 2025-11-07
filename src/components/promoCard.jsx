@@ -3,7 +3,7 @@ import styles from "../styles/promoCard.module.css";
 import { theme } from "../theme";
 import phone1 from "../assets/mockup-left.png";
 import phone2 from "../assets/mockup-left-1.png";
-import phone3 from "../assets/mockup-left.png";
+import phone3 from "../assets/mockup-left-2.png";
 
 export default function PromoCard() {
   const images = [phone1, phone2, phone3];

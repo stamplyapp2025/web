@@ -1,8 +1,9 @@
 .container {
   text-align: center;
   background-color: #ffffff;
-  min-height: 100vh;
-  padding: 48px 24px;
+  height: auto;
+  padding: 48px 24px 24px; /* ✅ reduce bottom padding */
+  margin: 0; /* ✅ prevent extra space */
 }
 
 .title {
@@ -15,7 +16,7 @@
 .subtitle {
   color: #888888;
   font-size: 1rem;
-  margin-bottom: 40px;
+  margin-bottom: 24px; /* ✅ was 40px, reduced */
 }
 
 .plans {
@@ -23,6 +24,7 @@
   justify-content: center;
   gap: 32px;
   flex-wrap: wrap;
+  margin-bottom: 0; /* ✅ avoid pushing space below */
 }
 
 /* --- Card Styles --- */
@@ -34,6 +36,7 @@
   padding: 32px 24px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
+  margin-bottom: 16px; /* ✅ small spacing between rows on mobile */
 }
 
 .card:hover {
@@ -58,7 +61,7 @@
   font-size: 2rem;
   font-weight: bold;
   color: #F7A500;
-  margin: 12px 0 24px;
+  margin: 12px 0 16px; /* ✅ tightened */
 }
 
 .currency {
@@ -76,7 +79,7 @@
 .features {
   list-style: none;
   padding: 0;
-  margin: 0 0 24px;
+  margin: 0 0 16px; /* ✅ was 24px */
 }
 
 .features li {
