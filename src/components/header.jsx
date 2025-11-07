@@ -15,12 +15,12 @@ const Header = () => {
       <nav className={styles.nav}>
         <Link to="/pricing" className={styles.link}>Pricing</Link>
         <a href="#blog" className={styles.link}>Blog</a>
-         <Link to="/support" className={styles.link}>Contact</Link>
+        <Link to="/support" className={styles.link}>Contact</Link>
       </nav>
 
       <div className={styles.buttonContainer}>
         <button className={styles.downloadButton}>Download</button>
-        <button className={styles.getStartedButton}>Get Started</button>
+        <Link to="/signup" className={styles.link}>Get Started</Link>
       </div>
     </header>
   );

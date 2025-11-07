@@ -1,0 +1,159 @@
+.wrapper {
+  display: flex;
+  min-height: 100vh;
+  background-color: #fff6d9;
+  margin-top: 45px;
+}
+
+/* --- Left Side (Visual Section) --- */
+.visual {
+  flex: 1;
+  background: linear-gradient(135deg, #FF9800, #F57C00);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: white;
+}
+
+.overlay {
+  text-align: center;
+  max-width: 400px;
+  padding: 32px;
+}
+
+.overlay h1 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.overlay h1 span {
+  color: #fff6d9;
+}
+
+.overlay p {
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* --- Right Side (Form Section) --- */
+.formContainer {
+  flex: 1.2;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 64px;
+  box-shadow: -4px 0 12px rgba(0, 0, 0, 0.05);
+}
+
+.formContainer h2 {
+  color: #F7A500;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.subtext {
+  color: #666;
+  margin-bottom: 24px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.row {
+  display: flex;
+  gap: 16px;
+}
+
+.row input {
+  flex: 1;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+input[type="file"] {
+  border: 1px solid #eeeeee;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+}
+
+input:focus {
+  border-color: #F7A500;
+  outline: none;
+}
+
+.disabledInput {
+  background: #f9f9f9;
+  color: #888;
+  cursor: not-allowed;
+}
+
+/* --- Logo Upload --- */
+.logoUpload {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.logoLabel {
+  font-weight: 500;
+  color: #222;
+}
+
+.logoPreview {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-top: 6px;
+  border: 1px solid #eee;
+}
+
+/* --- Submit Button --- */
+.submitButton {
+  margin-top: 12px;
+  background: linear-gradient(135deg, #FF9800, #F57C00);
+  color: #fff;
+  border: none;
+  border-radius: 9999px;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.submitButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(247, 165, 0, 0.4);
+}
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+  .wrapper {
+    flex-direction: column;
+  }
+
+  .visual {
+    height: 220px;
+  }
+
+  .formContainer {
+    padding: 32px 24px;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+}

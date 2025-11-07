@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import styles from "../styles/support.module.css";
 import http from "../http/http";
-import errorMessage from "../http/httpMessage"
+import axios from "axios";
+import { errorMessage } from "../http/httpMessage";
 
 const SupportPage = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -12,7 +13,7 @@ const SupportPage = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+   
     try{
       const res = await http.post(`/v1/support`, form);
       if(res.data.success){
