@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting…</title>
+    <script type="text/javascript">
+      // Redirect all unknown routes to index.html while preserving the path
+      (function() {
+        const redirectTo = window.location.protocol + '//' + window.location.host + '/?redirect=' + encodeURIComponent(window.location.pathname);
+        window.location.replace(redirectTo);
+      })();
+    </script>
+  </head>
+  <body>
+    <noscript>
+      If you are not redirected automatically, <a href="/">click here</a>.
+    </noscript>
+  </body>
+</html>
