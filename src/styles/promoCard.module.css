@@ -1,3 +1,15 @@
+/* ✅ GLOBAL SAFETY RESET (applies only when using CSS modules with :global) */
+:global(*) {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:global(html, body) {
+  overflow-x: hidden; /* prevents any horizontal scroll */
+}
+
+/* --- CARD --- */
 .card {
   display: flex;
   align-items: center;
@@ -6,22 +18,30 @@
 
   width: 100%;
   max-width: 960px;
+  margin: 0 auto; /* centers the card horizontally */
+  box-sizing: border-box; /* ensures padding doesn’t overflow */
+  overflow: hidden; /* hides anything pushing beyond bounds */
+
   padding: 40px 60px;
   border-radius: 20px;
 
-  /* ✅ Top border darker, others subtle */
+  margin-top: 45px;
+  z-index: 9999;
+
+  /* Borders */
   border-top: 3px solid rgba(0, 0, 0, 0.6);
   border-right: 1px solid rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   border-left: 1px solid rgba(0, 0, 0, 0.1);
 
+  /* Background + shadow */
   background: linear-gradient(145deg, #ffffff, #f3f3f3);
   box-shadow:
     0 12px 30px rgba(0, 0, 0, 0.1),
     0 4px 10px rgba(0, 0, 0, 0.05);
-  border-radius: 20px;
+
   transition: all 0.3s ease;
-  z-index: 999;
+  z-index: 1;
 }
 
 .card:hover {
@@ -31,7 +51,7 @@
     0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-
+/* --- TEXT AREA --- */
 .textArea {
   flex: 1;
   min-width: 260px;
@@ -57,7 +77,7 @@
   color: #888;
 }
 
-/* Image slider area */
+/* --- IMAGE SLIDER AREA --- */
 .imageArea {
   flex: 1;
   min-width: 280px;
@@ -88,7 +108,7 @@
   filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.15));
 }
 
-/* Dots */
+/* --- DOTS --- */
 .dots {
   position: absolute;
   bottom: 12px;
@@ -109,4 +129,28 @@
 
 .activeDot {
   background: #f7a500;
+}
+
+/* --- RESPONSIVE FIXES --- */
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+    padding: 24px 20px;
+    text-align: center;
+  }
+
+  .textArea,
+  .imageArea {
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  .title {
+    font-size: 2.2rem;
+  }
+
+  .image {
+    width: 90%;
+    max-width: 280px;
+  }
 }

@@ -1,14 +1,26 @@
+/* --- Full-width outer header --- */
 .header {
+  width: 100%;
   background-color: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 16px 32px;
-  border-bottom: 1px solid #eeeeee;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.05),
+    0 6px 12px rgba(0, 0, 0, 0.06);
   position: sticky;
   top: 0;
   z-index: 1000;
+}
+
+/* --- Inner centered container --- */
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
 /* --- Logo --- */
@@ -16,44 +28,35 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  font-weight: bold;
-  color: #222222;
-  font-size: 1.25rem;
+  text-decoration: none;
 }
-
-.logoMark {
+.logo {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #FF9800, #F57C00);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-weight: bold;
-  font-size: 1rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
-
 .logoText {
   font-weight: bold;
-  color: #222222;
+  color: #222;
+  font-size: 1.25rem;
 }
 
-/* --- Navigation --- */
+/* --- Nav --- */
 .nav {
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 24px;
+  flex: 1;
+  gap: 32px;
+  transition: all 0.3s ease;
 }
-
 .link {
-  color: #222222;
+  color: #222;
   text-decoration: none;
   font-weight: 500;
+  font-size: 1rem;
   transition: color 0.2s ease;
 }
-
 .link:hover {
   color: #F7A500;
 }
@@ -62,26 +65,7 @@
 .buttonContainer {
   display: flex;
   align-items: center;
-  gap: 16px;
 }
-
-.downloadButton {
-  border: 2px solid #F7A500;
-  border-radius: 9999px;
-  padding: 8px 18px;
-  color: #F7A500;
-  background: transparent;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  text-decoration: none;
-}
-
-.downloadButton:hover {
-  background-color: #ee991a;
-  color: #fff;
-}
-
 .getStartedButton {
   background: linear-gradient(135deg, #FF9800, #F57C00);
   border-radius: 9999px;
@@ -91,8 +75,80 @@
   font-weight: bold;
   cursor: pointer;
   transition: opacity 0.2s ease;
+  text-decoration: none;
 }
-
 .getStartedButton:hover {
   opacity: 0.85;
+}
+
+/* --- Hamburger --- */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 28px;
+  height: 22px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+}
+.hamburger span {
+  height: 3px;
+  width: 100%;
+  background: #333;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+.hamburger.open span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* --- Responsive --- */
+@media (max-width: 992px) {
+  .inner {
+    padding: 12px 24px;
+  }
+}
+@media (max-width: 768px) {
+  .inner {
+    flex-direction: column;
+    align-items: center;
+    padding: 12px 16px;
+  }
+
+  .hamburger {
+    display: flex;
+    position: absolute;
+    top: 18px;
+    right: 24px;
+  }
+
+  .nav {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 16px;
+    padding: 16px 0;
+    background: #fff;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  }
+  .showMenu {
+    display: flex;
+  }
+
+  .buttonContainer {
+    display: none;
+  }
 }

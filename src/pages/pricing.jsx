@@ -46,7 +46,7 @@ const PricingPage = () => {
           >
             <h2 className={styles.planName}>{plan.name}</h2>
             <p className={styles.price}>
-              <span className={styles.currency}>$</span>
+              <span className={styles.currency}>DKK</span>
               {plan.price}
               <span className={styles.period}>/month</span>
             </p>

@@ -4,15 +4,13 @@ import PricingPage from "./pricing";
 import styles from"../styles/home.module.css"; 
 import SupportPage from "./support";
 import HeaderText from "../components/headerText";
+import { theme } from "../theme";
 
 export default function HomePage() {
   return (
     <div className={styles.homeContainer}>
-      <section className={styles.topSection}>
-        <HeaderText/>
-        <PromoCard/>
-        <section className={styles.bottomSection}/>
-      </section>
+      <HeaderText/>
+      <PromoCard/>
       <PricingPage/>
       <SupportPage/>
     </div>
