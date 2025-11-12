@@ -73,3 +73,13 @@
 .btnFilled:hover {
   background: grey;
 }
+
+.appStoreBadge {
+  height: 40px;
+  margin-left: 10px;
+  transition: transform 0.2s ease;
+}
+
+.appStoreBadge:hover {
+  transform: scale(1.05);
+}

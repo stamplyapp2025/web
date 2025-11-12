@@ -42,8 +42,8 @@ const SignupPage = () => {
       {/* --- Left Visual Section --- */}
       <div className={styles.visual}>
         <div className={styles.overlay}>
-          <h1>Join <span>WinStamp</span></h1>
-          <p>Manage your business smarter — start your free 7-day trial today.</p>
+          <h1>Join <span>Stamply</span></h1>
+          <p>Manage your business smarter — start your free 3 months trial today.</p>
         </div>
       </div>
 

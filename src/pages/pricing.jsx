@@ -34,7 +34,7 @@ const PricingPage = () => {
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>Choose Your Plan</h1>
-      <p className={styles.subtitle}>All plans include a 7-day free trial</p>
+      <p className={styles.subtitle}>All plans include 3 months free trial</p>
 
       <div className={styles.plans}>
         {plans.map((plan) => (
@@ -60,7 +60,7 @@ const PricingPage = () => {
                 plan.highlight ? styles.primaryButton : styles.secondaryButton
               }
             >
-              Start 7-Day Free Trial
+              Start 3 months Free Trial
             </button>
           </div>
         ))}
