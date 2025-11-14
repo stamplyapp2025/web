@@ -87,7 +87,7 @@ const SupportPage = () => {
       <section className={styles.faq}>
         <h2>Frequently Asked Questions</h2>
         <div className={styles.faqItem}>
-          <h3>How do I start my 7-day free trial?</h3>
+          <h3>How do I start my 3 months free trial?</h3>
           <p>
             Simply choose any plan on our Pricing page and click “Start Free Trial.”
             No charges will be made until your trial period ends.

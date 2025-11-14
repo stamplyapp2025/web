@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className={styles.footer}>
       <p>
-        © {new Date().getFullYear()} <strong>Stamply</strong>. © 2025 Stamply by Minh Luan Lu. All rights reserved.
+        © {new Date().getFullYear()} <strong>Stamply</strong>. by Minh Luan Lu. All rights reserved.
         &nbsp;|&nbsp;
         <Link to="/privacy" className={styles.link}>Privacy Policy</Link>
         &nbsp;|&nbsp;
