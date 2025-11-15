@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styles from "../styles/signup.module.css";
+import http from "../http/http";
 
 const SignupPage = () => {
   const [form, setForm] = useState({
@@ -7,10 +8,9 @@ const SignupPage = () => {
     email: "",
     phone: "",
     address: "",
-    storeName: "",
-    storeLogo: null,
+    image: "",
     description:"",
-    role: "Business",
+    role: "business",
     password: "",
     confirmPassword: "",
   });
@@ -28,13 +28,31 @@ const SignupPage = () => {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
     if (form.password !== form.confirmPassword) {
       alert("Passwords do not match!");
       return;
     }
-    alert("🎉 Account created successfully!");
+
+    try {
+      const formData = new FormData();
+      Object.keys(form).forEach((key) => {
+        formData.append(key, form[key]);
+      });
+
+      const res = await http.post(`/v1/user/signup-business`, formData, {
+        headers: { "Content-Type": "multipart/form-data" },
+      });
+
+      if (res.data.success) {
+        alert("🎉 Account created successfully!");
+        setForm({});
+      }
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   return (
@@ -72,7 +90,7 @@ const SignupPage = () => {
             <input
               id="storeLogo"
               type="file"
-              name="storeLogo"
+              name="image"
               accept="image/*"
               onChange={handleChange}
             />
